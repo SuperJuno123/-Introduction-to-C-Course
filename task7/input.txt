@@ -1,0 +1,16 @@
++10 another name -10
+hell_091 191 -1E+1 
+JOINED_WITH_TEXT_.30 sf 2304 2034 92039 20 - we= 
+20 - -0 309 24-09 --42.4 -4.63
+4 4.3 .4 SOME_TEXT +53 092 93 54
+11.22
+.30
+-3.
+1e+6
+-123E-12
+Non-Numeric
+Non-Numberic039
+3094Non-Numeric
+0.2
+-3.4
+1E-123
