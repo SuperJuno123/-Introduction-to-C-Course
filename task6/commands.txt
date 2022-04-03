@@ -1,0 +1,50 @@
+add 1234 VALID_NAME
+add Non-NumericValue VALID_NAME
+add askdasjdkl
+add 
+add 0
+add NAME_WITHOUT_VALUE
+add 9999 ANOTHER_VALID_NAME
+add 1 VALID_ARGUMENT SOME_EXTRA_ARGUMENT
+
+add 1001 TEST_NAME1
+add 1002 TEST_NAME2
+ass 1003 TEST_NAME3
+
+add 1111 REPEATED_VALUE
+add 1111 REPEATED_VALUE
+add 1111 REPEATED_VALUE
+add 1111 REPEATED_VALUE
+
+
+non_existent_command
+non_existent_command 1234 VALID_NAME
+non_existent_command 8 99 00  
+
+remove_value 98766
+remove_value 1234
+remove_value 1
+remove_value jsdj
+remove_value
+remove_value 1234
+remove_value 1234 kjl jj 
+
+remove_name TEST_NAME1
+remove_name NON_EXISTENT_NAME
+remove_name
+remove_name 998
+remove_name
+
+search_value TEST_NAME1
+search_value TEST_NAME2
+search_value 
+search_value NON_EXISTENT_NAME
+search_value 908
+search_value 1 2 3 4 5
+
+count
+count 20349
+count TEXT
+
+print
+print 998 sdf
