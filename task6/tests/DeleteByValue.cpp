@@ -1,0 +1,95 @@
+#include <cassert>
+#include "LinkedList.h"
+
+
+void DeleteFirstElem_test() {
+
+	Data original_data_arr[2] = { {4, "Susie"},
+				{10, "Andrew"}
+	};
+	List list = List(original_data_arr, 2);
+
+	bool result = list.DeleteByValue(4);
+
+	List estimated_list = List(original_data_arr[1]);
+
+	assert(list == estimated_list);
+	assert(result == true);
+}
+
+void DeleteLastElem_test() {
+
+	Data original_data_arr[2] = { {4, "Susie"},
+				{10, "Andrew"}
+	};
+	List list = List(original_data_arr, 2);
+
+	list.DeleteByValue(10);
+
+	List estimated_list = List(original_data_arr[0]);
+
+	assert(list == estimated_list);
+}
+
+void DeleteSeveralElems_test() {
+	Data original_data_arr[5] = { {4, "Susie"},
+			{10, "Andrew"},
+			{40, "Iwan"},
+			{47, "Sasha"},
+			{54, "Marina"},
+	};
+	List list = List(original_data_arr, 5);
+
+	list.DeleteByValue(40);
+	list.DeleteByValue(10);
+
+	Data new_data_arr[3] = { original_data_arr[0],
+	original_data_arr[3],
+	original_data_arr[4] };
+
+	List estimated_list = List(new_data_arr, 3);
+
+	assert(list == estimated_list);
+}
+
+void DeleteRepeatedElem_test() {
+	Data original_data_arr[2] = { {4, "Susie"},
+				{4, "Andrew"},
+	};
+
+	List list = List(original_data_arr, 2);
+
+	list.DeleteByValue(4);
+
+	List estimated_list = List(Data(4, "Andrew"));
+
+	assert(list == estimated_list);
+
+
+}
+
+void DeleteNonExistentElem_test() {
+	Data original_data_arr[2] = { {4, "Susie"},
+					{10, "Andrew"},
+	};
+
+	List list = List(original_data_arr, 2);
+
+	bool reslut = list.DeleteByValue(987);
+
+	List estimated_list = List(original_data_arr, 2);
+
+	assert(list == estimated_list);
+	assert(reslut == false);
+
+
+}
+
+int main() {
+	DeleteFirstElem_test();
+	DeleteLastElem_test();
+	DeleteSeveralElems_test();
+	DeleteRepeatedElem_test();
+	DeleteNonExistentElem_test();
+	return 0;
+}
